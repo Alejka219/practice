@@ -14,14 +14,12 @@ practice 2026
 - Аналитика затраченного времени
 
 ## Технологии
-- Backend: Python (Flask)
-- Frontend: HTML5, CSS3, JavaScript
-- База данных: SQLite
-- Деплой: GitHub Pages + Heroku (планируется)
+- Frontend: HTML, CSS, JavaScript
+- Деплой: GitHub Pages
 
 ## Структура репозитория
-```
-.
+
+
 ├── README.md
 ├── docs/
 │   ├── journal.md
@@ -33,10 +31,10 @@ practice 2026
 │   ├── Отчёт.docx
 │   └── Отчёт.pdf
 └── adblocker.js (вариативная часть)
-```
+
 
 ## Участники
-Выполнил: Иванов Иван, группа ИС-21 (или свои данные)
+Выполнил: Коленков Даниил, Агибалов Олег, группа 251-339
 
 ## Ссылки
 - [GitHub Pages сайта](https://твойлогин.github.io/репозиторий/)
