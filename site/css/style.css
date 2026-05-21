@@ -11,3 +11,6 @@
         footer { text-align: center; padding: 1rem; background: #2c3e50; color: #d7d5eb; margin-top: 2rem; }
         img, video { max-width: 100%; height: auto; display: block; margin: 1rem 0; border-radius: 5px; }
         .resources a { display: inline-block; margin: 5px 10px 5px 0; }
+        a {
+    color: #ff6600;
+}
