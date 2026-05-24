@@ -1,6 +1,6 @@
 # Техническое руководство: создание блокировщика рекламы (AdBlocker) с нуля на JavaScript
 
-![Схема работы AdBlocker] (![alt text](../site/tutor.png))
+![alt text](../site/tutor.png)
 
 ## Цель руководства
 Научиться создавать простой, но работающий блокировщик рекламы, который перехватывает сетевые запросы к рекламным доменам и отменяет их. Руководство рассчитано на начинающих веб-разработчиков.
@@ -31,30 +31,30 @@
 ### Шаг 2. Пишем чёрный список рекламных доменов
 В файле `adblocker.js` определите массив доменов, которые будут блокироваться.
 
-```javascript
+(```javascript
 const blockedDomains = [
     'doubleclick.net',
     'googleadservices.com',
     'googlesyndication.com',
     'adservice.com',
     'criteo.com'
-];
+];)
 
 ### Шаг 3. Перехватываем window.fetch
 Сохраняем оригинальный метод и заменяем его своей функцией.
 
-const originalFetch = window.fetch;
+(const originalFetch = window.fetch;
 window.fetch = function(url, options) {
     if (blockedDomains.some(domain => url.toString().includes(domain))) {
         console.log(`[AdBlocker] Заблокирован запрос fetch: ${url}`);
         return Promise.reject(new Error('Запрос заблокирован AdBlocker'));
     }
     return originalFetch(url, options);
-};
+};)
 
 ### Шаг 4. Перехватываем XMLHttpRequest
 
-const originalOpen = XMLHttpRequest.prototype.open;
+(const originalOpen = XMLHttpRequest.prototype.open;
 XMLHttpRequest.prototype.open = function(method, url) {
     if (blockedDomains.some(domain => url.includes(domain))) {
         console.log(`[AdBlocker] Заблокирован XHR: ${url}`);
@@ -62,7 +62,7 @@ XMLHttpRequest.prototype.open = function(method, url) {
         return;
     }
     return originalOpen.apply(this, arguments);
-};
+};)
 
 ### Шаг 5. Тестирование
 Открываем любой сайт с кучей рекламы
